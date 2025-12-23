@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kunal | Portfolio</title>
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h2 class="logo">Kunal</h2>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+
+      <!-- 🔥 ADDED ONLY THIS -->
+      <li>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero reveal">
+    <h1>Hi, I'm Kunal 👋</h1>
+    <p>Computer Science Engineering Student</p>
+    <a href="#projects" class="btn">View Projects</a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section reveal">
+    <h2>About Me</h2>
+    <p>
+      I'm a Computer Science Engineering student who enjoys building practical
+      projects and learning how real systems work. I focus on fundamentals,
+      clean code, and continuous improvement.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section light-bg reveal">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Java</span>
+      <span>Python</span>
+      <span>DSA</span>
+      <span>Linux</span>
+      <span>Git & GitHub</span>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section reveal">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+
+      <div class="project-card reveal">
+        <img src="assets/projects/expense-tracker.png" alt="Screenshot of Expense Tracker project">
+        <div class="project-content">
+          <h3>Expense Tracker</h3>
+          <p>
+            A web app to track income and expenses with persistent storage using LocalStorage.
+          </p>
+          <div class="links">
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <img src="assets/projects/todo-app.png" alt="Screenshot of To-Do List project">
+        <div class="project-content">
+          <h3>To-Do List App</h3>
+          <p>
+            A minimal to-do list app with add, delete, and save functionality.
+          </p>
+          <div class="links">
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section light-bg reveal">
+    <h2>Contact</h2>
+    <p>Email: <strong>yourmail@gmail.com</strong></p>
+    <p>
+      GitHub:
+      <a href="https://github.com/yourusername" target="_blank">
+        github.com/yourusername
+      </a>
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Kunal. Built with HTML, CSS & JavaScript.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
