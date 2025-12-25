@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,18 +15,16 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="top">
 
   <!-- NAVBAR -->
   <nav>
-    <h2 class="logo">Kunal</h2>
+    <h2 class="logo"><a href="#top">Kunal</a></h2>
     <ul>
-      <li><a href="about.html">About</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-
-      <!-- 🔥 ADDED ONLY THIS -->
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
       <li>
         <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
       </li>
@@ -36,7 +35,22 @@
   <section class="hero reveal">
     <h1>Hi, I'm Kunal 👋</h1>
     <p>Computer Science Engineering Student</p>
+
+    <p class="hero-sub">
+      I build clean, responsive web interfaces and enjoy turning ideas into usable products.
+    </p>
+
     <a href="#projects" class="btn">View Projects</a>
+  </section>
+
+  <!-- CURRENTLY FOCUSED -->
+  <section class="section reveal">
+    <h2>Currently Focused On</h2>
+    <ul class="focus-list">
+      <li>⚙️ Building JavaScript projects with clean UI</li>
+      <li>📘 Strengthening DSA & problem-solving</li>
+      <li>🌱 Learning backend fundamentals</li>
+    </ul>
   </section>
 
   <!-- ABOUT -->
@@ -47,6 +61,22 @@
       projects and learning how real systems work. I focus on fundamentals,
       clean code, and continuous improvement.
     </p>
+  </section>
+
+  <!-- STATS -->
+  <section class="section light-bg reveal stats">
+    <div class="stat">
+      <h3>5+</h3>
+      <p>Projects Built</p>
+    </div>
+    <div class="stat">
+      <h3>1+</h3>
+      <p>Year Learning</p>
+    </div>
+    <div class="stat">
+      <h3>∞</h3>
+      <p>Curiosity</p>
+    </div>
   </section>
 
   <!-- SKILLS -->
@@ -67,33 +97,53 @@
   <!-- PROJECTS -->
   <section id="projects" class="section reveal">
     <h2>Projects</h2>
+    <p class="section-intro">
+      A few practical projects where I focused on clean UI, logic,
+      and real-world usability.
+    </p>
 
     <div class="project-grid">
 
       <div class="project-card reveal">
-        <img src="assets/projects/expense-tracker.png" alt="Screenshot of Expense Tracker project">
+        <img src="assets/projects/expense-tracker.png" alt="Expense Tracker project">
         <div class="project-content">
           <h3>Expense Tracker</h3>
-          <p>
-            A web app to track income and expenses with persistent storage using LocalStorage.
+          <p class="project-desc">
+            Tracks income and expenses with persistent storage, clean UI,
+            and real-time balance calculation.
           </p>
+
+          <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>LocalStorage</span>
+          </div>
+
           <div class="links">
-            <a href="#" target="_blank">GitHub</a>
-            <a href="#" target="_blank">Live Demo</a>
+            <a href="#" target="_blank">Code</a>
+            <a href="#" target="_blank">Live</a>
           </div>
         </div>
       </div>
 
       <div class="project-card reveal">
-        <img src="assets/projects/todo-app.png" alt="Screenshot of To-Do List project">
+        <img src="assets/projects/todo-app.png" alt="To-Do List App project">
         <div class="project-content">
           <h3>To-Do List App</h3>
-          <p>
-            A minimal to-do list app with add, delete, and save functionality.
+          <p class="project-desc">
+            A minimal to-do list app with add, delete, and persistent storage.
           </p>
+
+          <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+
           <div class="links">
-            <a href="#" target="_blank">GitHub</a>
-            <a href="#" target="_blank">Live Demo</a>
+            <a href="#" target="_blank">Code</a>
+            <a href="#" target="_blank">Live</a>
           </div>
         </div>
       </div>
@@ -118,7 +168,13 @@
     <p>© 2025 Kunal. Built with HTML, CSS & JavaScript.</p>
   </footer>
 
+  <!-- NOTE -->
+  <p class="note">
+    Outside coding, I enjoy learning new things and improving myself daily.
+  </p>
+
   <!-- JS -->
   <script src="script.js"></script>
 </body>
+
 </html>
