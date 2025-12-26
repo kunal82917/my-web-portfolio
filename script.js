@@ -1,36 +1,3 @@
-const reveals = document.querySelectorAll(".reveal");
-
-function revealOnScroll() {
-  const windowHeight = window.innerHeight;
-
-  reveals.forEach((el, index) => {
-    if (el.classList.contains("active")) return;
-
-    const elementTop = el.getBoundingClientRect().top;
-    const revealPoint = 100;
-
-    if (elementTop < windowHeight - revealPoint) {
-      setTimeout(() => {
-        el.classList.add("active");
-      }, index * 50);
-    }
-  });
-}
-
-let ticking = false;
-
-window.addEventListener("scroll", () => {
-  if (!ticking) {
-    window.requestAnimationFrame(() => {
-      revealOnScroll();
-      ticking = false;
-    });
-    ticking = true;
-  }
-});
-
-window.addEventListener("load", revealOnScroll);
-
 /* DARK MODE TOGGLE */
 const themeToggle = document.getElementById("theme-toggle");
 const savedTheme = localStorage.getItem("theme");
