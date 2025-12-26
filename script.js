@@ -1,3 +1,9 @@
+window.history.scrollRestoration = "manual";
+
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+});
+
 /* DARK MODE TOGGLE */
 const themeToggle = document.getElementById("theme-toggle");
 const savedTheme = localStorage.getItem("theme");
@@ -84,21 +90,6 @@ function initSkillFilters() {
 }
 
 window.addEventListener("load", initSkillFilters);
-
-/* SMOOTH SCROLL ENHANCEMENT */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  });
-});
 
 /* SCROLL PROGRESS INDICATOR */
 function updateScrollProgress() {
