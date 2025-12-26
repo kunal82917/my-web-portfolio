@@ -49,3 +49,18 @@ if (themeToggle) {
     themeToggle.textContent = isDark ? "☀️" : "🌙";
   });
 }
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+
+  reveals.forEach(el => {
+    if (el.classList.contains("active")) return;
+
+    const elementTop = el.getBoundingClientRect().top;
+    const revealPoint = 100;
+
+    if (elementTop < windowHeight - revealPoint) {
+      el.classList.add("active");
+    }
+  });
+}
