@@ -1,8 +1,3 @@
-// 🔒 Force browser to NOT restore scroll position
-if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual';
-}
-
 // 🔝 Force start at top immediately
 window.scrollTo(0, 0);
 
@@ -41,32 +36,32 @@ function animateCounter(element, target) {
   let current = 0;
   const duration = 2500;
   const startTime = Date.now();
-  
+
   function update() {
     const elapsed = Date.now() - startTime;
     const progress = Math.min(elapsed / duration, 1);
     const easeOut = 1 - Math.pow(1 - progress, 3);
     current = target * easeOut;
-    
+
     element.textContent = Math.floor(current);
-    
+
     if (progress < 1) {
       requestAnimationFrame(update);
     } else {
       element.textContent = target;
     }
   }
-  
+
   update();
 }
 
 function initCounters() {
   const counters = document.querySelectorAll(".counter");
-  
+
   const observerOptions = {
     threshold: 0.5
   };
-  
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting && !entry.target.dataset.counted) {
@@ -76,7 +71,7 @@ function initCounters() {
       }
     });
   }, observerOptions);
-  
+
   counters.forEach(counter => observer.observe(counter));
 }
 
@@ -85,12 +80,12 @@ window.addEventListener("load", initCounters);
 /* SKILL INTERACTION */
 function initSkillFilters() {
   const skillSpans = document.querySelectorAll(".skills span");
-  
+
   skillSpans.forEach(span => {
     span.addEventListener("click", (e) => {
       skillSpans.forEach(s => s.style.opacity = "0.4");
       e.target.style.opacity = "1";
-      
+
       setTimeout(() => {
         skillSpans.forEach(s => s.style.opacity = "1");
       }, 1500);
@@ -105,7 +100,7 @@ function updateScrollProgress() {
   const scrollTop = window.scrollY;
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
   const scrollPercent = (scrollTop / docHeight) * 100;
-  
+
   let progressBar = document.getElementById("progress-bar");
   if (!progressBar) {
     progressBar = document.createElement("div");
@@ -121,7 +116,7 @@ function updateScrollProgress() {
     `;
     document.body.appendChild(progressBar);
   }
-  
+
   progressBar.style.width = scrollPercent + "%";
 }
 
@@ -146,10 +141,6 @@ document.body.style.transition = "opacity 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)
 window.addEventListener("load", () => {
   document.body.style.opacity = "1";
 });
-
-setTimeout(() => {
-  document.body.style.opacity = "1";
-}, 100);
 
 /* INTERSECTION OBSERVER FOR ANIMATIONS */
 const observerOptions = {
