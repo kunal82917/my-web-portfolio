@@ -1,3 +1,12 @@
+// 🔒 Force browser to NOT restore scroll position
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+// 🔝 Force start at top immediately
+window.scrollTo(0, 0);
+
+
 window.history.scrollRestoration = "manual";
 
 window.addEventListener("load", () => {
